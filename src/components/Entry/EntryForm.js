@@ -12,7 +12,7 @@ const EntryForm = (props) => {
           <Form.Group controlId="title">
             <Form.Label>Title</Form.Label>
             <Form.Control
-              placeholder="Enter your journal entry title"
+              placeholder="Enter your entry title"
               value={entry.title}
               name="title"
               onChange={handleChange}

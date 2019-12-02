@@ -58,16 +58,16 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <Route exact path='/' render={() => (
-            <Entries alert={this.alert} />
+          <AuthenticatedRoute user={user} exact path='/entries' render={() => (
+            <Entries alert={this.alert} user={user} />
           )} />
-          <Route exact path='/books/:id' render={() => (
+          <AuthenticatedRoute exact path='/entries/:id' render={() => (
             <Entry alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/create-book' render={() => (
+          <AuthenticatedRoute user={user} path='/create-entries' render={() => (
             <EntryCreate alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} exact path='/books/:id/edit' render={() => (
+          <AuthenticatedRoute user={user} exact path='/entries/:id/edit' render={() => (
             <EntryEdit alert={this.alert} user={user} />
           )} />
         </main>

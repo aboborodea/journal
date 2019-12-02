@@ -32,10 +32,10 @@ const EntryEdit = (props) => {
       data: { entry }
     })
       .then(response => {
-        props.alert({ heading: 'Success', message: 'You updated a journal entry!', variant: 'success' })
+        props.alert({ heading: 'Success', message: 'You updated a journal entry', variant: 'success' })
         setUpdated(true)
       })
-      .catch(() => props.alert({ heading: 'OOPS!', message: 'That didn\'t work', variant: 'danger' }))
+      .catch(() => props.alert({ heading: 'Error', message: 'That didn\'t work', variant: 'danger' }))
   }
 
   if (updated) {

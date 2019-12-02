@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button'
+import React, { useEffect, useState, Fragment } from 'react'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
+import Button from 'react-bootstrap/Button'
 
 const Entry = props => {
   const [entry, setEntry] = useState(null)
-  const userId = props.user._id
+  const userId = props.user ? props.user._id : null
 
   useEffect(() => {
     axios(`${apiUrl}/entries/${props.match.params.id}`)
       .then(res => setEntry(res.data.entry))
-      .catch(console.error)
+      .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested journal entry', variant: 'danger' }))
   }, [])
 
   const handleDelete = event => {
@@ -23,22 +23,35 @@ const Entry = props => {
       }
     })
       .then(() => {
-        props.alert({ heading: 'Success', message: 'You deleted an entry!', variant: 'warning' })
-        props.history.push('/entries')
+        props.alert({ heading: 'Success', message: 'You deleted a journal entry', variant: 'warning' })
+        props.history.push('/')
       })
       .catch(() => {
-        props.alert({ heading: 'Failure', message: 'Something went wrong!', variant: 'danger' })
+        props.alert({ heading: 'Error', message: 'Something went wrong', variant: 'danger' })
       })
   }
 
   if (!entry) {
-    return <p>Loading...</p>
+    return <p>Loading stuff...</p>
   }
 
   return (
-    <div>
-      <h2>{entry.title}</h2>
-      {userId === entry.owner._id && <Button onClick={handleDelete}>Delete</Button>}
+    <div className="row">
+      <div className="col-sm-10 col-md-8 mx-auto mt-5">
+        <h2>{entry.title}</h2>
+        <h3 className="h5">written by {entry.author}</h3>
+        {entry.date
+          ? <p>{entry.date}</p>
+          : <p className="text-muted">No date specified</p>
+        }
+        {userId === entry.owner && (
+          <Fragment>
+            <Button href={`#entries/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
+            <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
+          </Fragment>
+        )}
+        <Button href="#/" variant="secondary">Back</Button>
+      </div>
     </div>
   )
 }

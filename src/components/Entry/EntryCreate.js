@@ -24,10 +24,10 @@ const EntryCreate = (props) => {
       data: { entry }
     })
       .then(response => {
-        props.alert({ heading: 'Success', message: 'You created a journal entry!', variant: 'success' })
+        props.alert({ heading: 'Success', message: 'You created a journal entry', variant: 'success' })
         props.history.push(`/entries/${response.data.entry._id}`)
       })
-      .catch(() => props.alert({ heading: 'Errr...', message: 'Something went wrong', variant: 'danger' }))
+      .catch(() => props.alert({ heading: 'Error', message: 'Something went wrong', variant: 'danger' }))
   }
 
   return (
