@@ -11,7 +11,11 @@ const Entry = props => {
   useEffect(() => {
     axios(`${apiUrl}/entries/${props.match.params.id}`)
       .then(res => setEntry(res.data.entry))
-      .catch(() => props.alert({ heading: 'That didn\'t work', message: 'Couldn\'t retrieve the requested journal entry', variant: 'danger' }))
+      .catch(() => props.alert({
+        heading: 'That didn\'t work',
+        message: 'Couldn\'t retrieve the requested journal entry',
+        variant: 'danger'
+      }))
   }, [])
 
   const handleDelete = event => {
@@ -23,11 +27,17 @@ const Entry = props => {
       }
     })
       .then(() => {
-        props.alert({ heading: 'Success', message: 'You deleted a journal entry', variant: 'warning' })
+        props.alert({
+          heading: 'Success',
+          message: 'You deleted a journal entry',
+          variant: 'warning' })
         props.history.push('/')
       })
       .catch(() => {
-        props.alert({ heading: 'Error', message: 'Something went wrong', variant: 'danger' })
+        props.alert({
+          heading: 'Error',
+          message: 'Something went wrong',
+          variant: 'danger' })
       })
   }
 
@@ -39,11 +49,7 @@ const Entry = props => {
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h2>{entry.title}</h2>
-        <h3 className="h5">written by {entry.author}</h3>
-        {entry.date
-          ? <p>{entry.date}</p>
-          : <p className="text-muted">No date specified</p>
-        }
+        <h3 className="h5">written on {entry.date}</h3>
         {userId === entry.owner && (
           <Fragment>
             <Button href={`#entries/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>

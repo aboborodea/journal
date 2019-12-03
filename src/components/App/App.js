@@ -8,6 +8,7 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import LandingPage from '../LandingPage/LandingPage'
 import Entries from '../Entry/Entries'
 import Entry from '../Entry/Entry'
 import EntryCreate from '../Entry/EntryCreate'
@@ -57,6 +58,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/' render={() => (
+            <LandingPage />
           )} />
           <AuthenticatedRoute user={user} exact path='/entries' render={() => (
             <Entries alert={this.alert} user={user} />

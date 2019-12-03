@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
+    <Nav.Link href="#entries">My Journal Entries</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
-    <Nav.Link href="#entries">Journal Entry</Nav.Link>
   </Fragment>
 )
 
@@ -19,13 +19,14 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
+    <Nav.Link to="/">Home</Nav.Link>
   </Fragment>
 )
 
 const Header = ({ user }) => (
-  <Navbar bg="primary" variant="dark" expand="md">
-    <Navbar.Brand href="#">
-      journal-client
+  <Navbar className="navbar" bg="primary" variant="dark" expand="md">
+    <Navbar.Brand className="navtitle" href="#">
+      open thoughts
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

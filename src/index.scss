@@ -1,1 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
+
+// @font-face {
+//   font-family: 'GFS Didot';
+//   src: local('GFS Didot'), url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap') format('truetype');
+// }
+
+body {
+
+}
+
+.navbar {
+  background-color: #fc0352 !important;
+  color: #F29191;
+  font-family: Nickainley;
+  font-size: 20px;
+  height: 5em;
+  justify-content: center;
+}
+
+.navtitle {
+  float: right;
+  font-size: 50px;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
