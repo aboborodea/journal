@@ -12,7 +12,7 @@ const EntryForm = (props) => {
           <Form.Group controlId="title">
             <Form.Label>Title</Form.Label>
             <Form.Control
-              placeholder="Enter your entry title"
+              placeholder="Journal Title"
               value={entry.title}
               name="title"
               onChange={handleChange}
@@ -22,7 +22,7 @@ const EntryForm = (props) => {
             <Form.Label>Date</Form.Label>
             <Form.Control
               placeholder="01-01-2019"
-              value={entry.author}
+              value={entry.date}
               name="date"
               onChange={handleChange}
             />
@@ -31,7 +31,7 @@ const EntryForm = (props) => {
             <Form.Label>Journal Entry</Form.Label>
             <Form.Control
               placeholder="Start writing here..."
-              value={entry.originalLanguage}
+              value={entry.entry}
               name="entry"
               onChange={handleChange}
             />

@@ -9,7 +9,14 @@ const Entry = props => {
   const userId = props.user ? props.user._id : null
 
   useEffect(() => {
-    axios(`${apiUrl}/entries/${props.match.params.id}`)
+    console.log(props.match.params.id)
+    axios({
+      url: `${apiUrl}/entries/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${props.user.token}`
+      }
+    })
       .then(res => setEntry(res.data.entry))
       .catch(() => props.alert({
         heading: 'That didn\'t work',
@@ -29,15 +36,17 @@ const Entry = props => {
       .then(() => {
         props.alert({
           heading: 'Success',
-          message: 'You deleted a journal entry',
-          variant: 'warning' })
-        props.history.push('/')
+          message: 'You deleted your journal entry',
+          variant: 'warning'
+        })
+        props.history.push('/entries')
       })
       .catch(() => {
         props.alert({
           heading: 'Error',
           message: 'Something went wrong',
-          variant: 'danger' })
+          variant: 'danger'
+        })
       })
   }
 
@@ -50,13 +59,14 @@ const Entry = props => {
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h2>{entry.title}</h2>
         <h3 className="h5">written on {entry.date}</h3>
+        <h2 className="h5">{entry.entry}</h2>
         {userId === entry.owner && (
           <Fragment>
             <Button href={`#entries/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
             <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
           </Fragment>
         )}
-        <Button href="#/" variant="secondary">Back</Button>
+        <Button href={'#/entries'} variant="secondary">Back</Button>
       </div>
     </div>
   )

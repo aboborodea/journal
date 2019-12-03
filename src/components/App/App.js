@@ -9,6 +9,7 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import LandingPage from '../LandingPage/LandingPage'
+import Home from '../Home/Home'
 import Entries from '../Entry/Entries'
 import Entry from '../Entry/Entry'
 import EntryCreate from '../Entry/EntryCreate'
@@ -62,10 +63,13 @@ class App extends Component {
           <Route exact path='/' render={() => (
             <LandingPage />
           )} />
+          <AuthenticatedRoute user={user} exact path='/home' render={() => (
+            <Home alert={this.alert} user={user} />
+          )} />
           <AuthenticatedRoute user={user} exact path='/entries' render={() => (
             <Entries alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute exact path='/entries/:id' render={() => (
+          <AuthenticatedRoute user={user} exact path='/entries/:id' render={() => (
             <Entry alert={this.alert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-entries' render={() => (

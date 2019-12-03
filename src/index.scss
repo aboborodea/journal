@@ -1,18 +1,22 @@
 @import '~bootstrap/scss/bootstrap';
-
-// @font-face {
-//   font-family: 'GFS Didot';
-//   src: local('GFS Didot'), url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap') format('truetype');
-// }
+@import url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap');
 
 body {
 
 }
 
+.landing-page {
+  display: block;
+  font-family: 'GFS Didot';
+  font-size: 25px;
+  margin-top: 10vh;
+  padding-left: 10px;
+}
+
 .navbar {
   background-color: #fc0352 !important;
   color: #F29191;
-  font-family: Nickainley;
+  font-family: 'GFS Didot', serif;
   font-size: 20px;
   height: 5em;
   justify-content: center;
@@ -22,6 +26,7 @@ body {
   float: right;
   font-size: 50px;
   justify-content: center;
+  text-align: center;
 }
 
 .title {
