@@ -16,7 +16,7 @@ margin: 0;
 }
 
 a {
-  color: #000;
+  color: #242324;
   font-family: 'GFS Didot';
   font-size: 20px;
 
@@ -72,7 +72,7 @@ a {
 }
 
 .navbar {
-  background-color: #fc0352 !important;
+  background-color: #dccafc !important;
   color: #F29191;
   font-family: 'GFS Didot';
   font-size: 20px;
@@ -105,16 +105,28 @@ textarea {
 }
 
 textarea:focus {
-  border: none;
+  outline: none !important;
 }
 
-.textbox-line1 {
+textarea:hover {
+  border: none !important;
+}
+
+.textbox {
   border-top: none;
   border-right: none;
   border-left: none;
   font-family: 'Handlee', cursive;
   font-size: 20px;
   width: 20%;
+}
+
+.textbox:focus {
+  outline: none !important;
+}
+
+.textbox:hover {
+  border: none !important;
 }
 
 .title {
