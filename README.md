@@ -9,7 +9,7 @@
 -   [Backend GitHub Link](https://github.com/aboborodea/project_2_api)
 
 
-<h4>Technologies Used</h4>
+<h4>Technologies</h4>
 <ul>
 <li>React/React Router</li>
 <li>JSX</li>
