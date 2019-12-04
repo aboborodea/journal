@@ -1,6 +1,6 @@
 {
   "name": "journal-client",
-  "homepage": "https://aboborodea.github.io/journal",
+  "homepage": "https://aboborodea.github.io/journal/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

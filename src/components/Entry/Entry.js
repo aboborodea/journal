@@ -9,7 +9,6 @@ const Entry = props => {
   const userId = props.user ? props.user._id : null
 
   useEffect(() => {
-    console.log(props.match.params.id)
     axios({
       url: `${apiUrl}/entries/${props.match.params.id}`,
       method: 'GET',
@@ -55,18 +54,18 @@ const Entry = props => {
   }
 
   return (
-    <div className="container-fluid">
-      <div className="col-sm-10 col-md-8 mx-auto mt-5">
+    <div className="container-fluid entry">
+      <div className="justify-content-md-center">
         <h2 className="entry-title">{entry.title}</h2>
         <h3 className="entry-date">written on {entry.date}</h3>
         <h2 className="entry">{entry.entry}</h2>
         {userId === entry.owner && (
           <Fragment>
-            <Button href={`#entries/${props.match.params.id}/edit`} variant="outline-info" className="entry-update">Update</Button>
-            <Button onClick={handleDelete} variant="outline-info" className="entry-delete">Delete</Button>
+            <Button href={`#entries/${props.match.params.id}/edit`} variant="outline-info" className="entry-button">Update</Button>
+            <Button onClick={handleDelete} variant="outline-info" className="entry-button">Delete</Button>
           </Fragment>
         )}
-        <Button href={'#/entries'} variant="outline-info" className="entry-back">Back</Button>
+        <Button href={'#/entries'} variant="outline-info" className="entry-button">Back</Button>
       </div>
     </div>
   )

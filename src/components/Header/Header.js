@@ -23,7 +23,7 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar className="navbar" bg="primary" variant="dark" expand="md">
+  <Navbar className="navbar" bg="primary" variant="dark" expand="md" collapseOnSelect>
     <Navbar.Brand className="navtitle" href="#">
       open thought
     </Navbar.Brand>

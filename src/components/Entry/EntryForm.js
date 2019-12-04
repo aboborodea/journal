@@ -5,12 +5,11 @@ import Button from 'react-bootstrap/Button'
 const EntryForm = (props) => {
   const { entry, handleChange, handleSubmit, cancelPath } = props
   return (
-    <div className="row">
-      <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2 className="entries-title">Journal Entry</h2>
+    <div className="container-fluid">
+      <div className="entry-form">
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="title">
-            <Form.Control
+            <Form.Control className="textbox-line1"
               placeholder="Journal Title"
               value={entry.title}
               name="title"
@@ -18,23 +17,20 @@ const EntryForm = (props) => {
             />
           </Form.Group>
           <Form.Group controlId="author">
-            <Form.Control
+            <Form.Control className="textbox-line1"
               placeholder="01-01-2019"
               value={entry.date}
               name="date"
               onChange={handleChange}
             />
           </Form.Group>
-          <Form.Group controlId="entry">
-            <Form.Control
-              placeholder="Journal Entry"
-              value={entry.entry}
-              name="entry"
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Button type="submit" variant="outline-info">Submit</Button>
-          <Button type="button" href={cancelPath} variant="outline-info" className="ml-2">Cancel</Button>
+          <form controlId="entry">
+            <div className="textarea" value={entry.entry} name="entry" onChange={handleChange}>
+              <textarea>Whats on your mind today?</textarea>
+            </div>
+          </form>
+          <Button className="entry-button" type="submit" variant="outline-info">Submit</Button>
+          <Button className="entry-button" type="button" href={cancelPath} variant="outline-info">Cancel</Button>
         </Form>
       </div>
     </div>
