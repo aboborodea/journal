@@ -3,6 +3,10 @@
 
 <h4>Important Links</h4>
 
+-   [Client Deployed Link](https://aboborodea.github.io/journal/)
+-   [Client GitHub Link](https://github.com/aboborodea/journal)
+-   [Backend Deployed Link](https://dry-basin-07175.herokuapp.com)
+-   [Backend GitHub Link](https://github.com/aboborodea/project_2_api)
 
 <h4>Technologies Used</h4>
 <ul>
