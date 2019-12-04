@@ -55,18 +55,18 @@ const Entry = props => {
   }
 
   return (
-    <div className="row">
+    <div className="container-fluid">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>{entry.title}</h2>
-        <h3 className="h5">written on {entry.date}</h3>
-        <h2 className="h5">{entry.entry}</h2>
+        <h2 className="entry-title">{entry.title}</h2>
+        <h3 className="entry-date">written on {entry.date}</h3>
+        <h2 className="entry">{entry.entry}</h2>
         {userId === entry.owner && (
           <Fragment>
-            <Button href={`#entries/${props.match.params.id}/edit`} variant="primary" className="mr-2">Update</Button>
-            <Button onClick={handleDelete} variant="danger" className="mr-2">Delete</Button>
+            <Button href={`#entries/${props.match.params.id}/edit`} variant="outline-info" className="entry-update">Update</Button>
+            <Button onClick={handleDelete} variant="outline-info" className="entry-delete">Delete</Button>
           </Fragment>
         )}
-        <Button href={'#/entries'} variant="secondary">Back</Button>
+        <Button href={'#/entries'} variant="outline-info" className="entry-back">Back</Button>
       </div>
     </div>
   )

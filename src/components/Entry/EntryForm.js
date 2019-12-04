@@ -7,10 +7,9 @@ const EntryForm = (props) => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h2>Add a Journal Entry</h2>
+        <h2 className="entries-title">Journal Entry</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="title">
-            <Form.Label>Title</Form.Label>
             <Form.Control
               placeholder="Journal Title"
               value={entry.title}
@@ -19,7 +18,6 @@ const EntryForm = (props) => {
             />
           </Form.Group>
           <Form.Group controlId="author">
-            <Form.Label>Date</Form.Label>
             <Form.Control
               placeholder="01-01-2019"
               value={entry.date}
@@ -28,16 +26,15 @@ const EntryForm = (props) => {
             />
           </Form.Group>
           <Form.Group controlId="entry">
-            <Form.Label>Journal Entry</Form.Label>
             <Form.Control
-              placeholder="Start writing here..."
+              placeholder="Journal Entry"
               value={entry.entry}
               name="entry"
               onChange={handleChange}
             />
           </Form.Group>
-          <Button type="submit" variant="primary">Submit</Button>
-          <Button type="button" href={cancelPath} variant="secondary" className="ml-2">Cancel</Button>
+          <Button type="submit" variant="outline-info">Submit</Button>
+          <Button type="button" href={cancelPath} variant="outline-info" className="ml-2">Cancel</Button>
         </Form>
       </div>
     </div>

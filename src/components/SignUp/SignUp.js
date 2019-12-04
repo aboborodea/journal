@@ -53,21 +53,19 @@ class SignUp extends Component {
     return (
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
-          <h3 className="sign-up">Sign Up</h3>
+          <h3 className="gfs-didot size32">Sign Up</h3>
           <Form onSubmit={this.onSignUp}>
             <Form.Group controlId="email">
-              <Form.Label className="sign-up sign-up-size">Email address</Form.Label>
               <Form.Control
                 required
                 type="email"
                 name="email"
                 value={email}
-                placeholder="Enter email"
+                placeholder="Email"
                 onChange={this.handleChange}
               />
             </Form.Group>
             <Form.Group controlId="password">
-              <Form.Label className="sign-up sign-up-size">Password</Form.Label>
               <Form.Control
                 required
                 name="password"
@@ -78,18 +76,17 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Form.Group controlId="passwordConfirmation">
-              <Form.Label className="sign-up sign-up-size">Password Confirmation</Form.Label>
               <Form.Control
                 required
                 name="passwordConfirmation"
                 value={passwordConfirmation}
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Password Confirmation"
                 onChange={this.handleChange}
               />
             </Form.Group>
             <Button
-              variant="primary"
+              variant="outline-info"
               type="submit"
             >
               Submit

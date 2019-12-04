@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
 // body {
 //   background-attachment: fixed;
@@ -8,6 +9,58 @@
 //   height: 100%;
 //   width: 100%;
 // }
+
+.size16 {
+  font-size: 16px;
+}
+
+.size32 {
+  font-size: 32px;
+}
+
+a {
+  color: #000;
+  font-family: 'GFS Didot';
+  font-size: 20px;
+
+}
+
+.entries-title {
+  font-family: 'GFS Didot';
+  font-size: 32px;
+}
+
+.entry {
+  display: flex;
+  font-family: 'Handlee', cursive;
+  font-size: 20px;
+
+}
+
+.entry-date {
+  display: flex;
+  font-family: 'Handlee', cursive;
+  font-size: 20px;
+}
+
+.entry-title {
+  display: flex;
+  font-family: 'Handlee', cursive;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.entry-update {
+
+}
+
+.gfs-didot {
+  font-family: 'GFS Didot';
+}
+
+.h {
+  font-size: 32px;
+}
 
 .landing-page {
   display: block;
@@ -32,20 +85,8 @@
   text-align: center;
 }
 
-.sign-in {
-  font-family: 'GFS Didot';
-}
-
-.sign-in-size {
-  font-size: 18px;
-}
-
-.sign-up-size {
-  font-size: 18px;
-}
-
-.sign-up {
-  font-family: 'GFS Didot';
+.row {
+  // border: 1px solid black;
 }
 
 .title {

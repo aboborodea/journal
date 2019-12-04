@@ -36,8 +36,8 @@ const Entries = props => {
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <div className="d-flex justify-content-between align-items-center">
-          <h1>Journal Entries</h1>
-          <Link to="/create-entries">New Journal Entry</Link>
+          <h1 className="entries-title">My Journal Entries</h1>
+          <Link className="entries-link" to="/create-entries">New Journal Entry</Link>
         </div>
         <ListGroup>
           {entriesJsx}
