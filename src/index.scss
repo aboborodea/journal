@@ -1,32 +1,51 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=GFS+Didot&display=swap');
 
-body {
-
-}
+// body {
+//   background-attachment: fixed;
+//   background-image: url('./images/wheel.png');
+//   background-size: cover;
+//   height: 100%;
+//   width: 100%;
+// }
 
 .landing-page {
   display: block;
   font-family: 'GFS Didot';
   font-size: 25px;
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding-left: 10px;
 }
 
 .navbar {
   background-color: #fc0352 !important;
   color: #F29191;
-  font-family: 'GFS Didot', serif;
+  font-family: 'GFS Didot';
   font-size: 20px;
   height: 5em;
   justify-content: center;
 }
 
 .navtitle {
-  float: right;
   font-size: 50px;
   justify-content: center;
   text-align: center;
+}
+
+.sign-in {
+  font-family: 'GFS Didot';
+}
+
+.sign-in-size {
+  font-size: 18px;
+}
+
+.sign-up-size {
+  font-size: 18px;
+}
+
+.sign-up {
+  font-family: 'GFS Didot';
 }
 
 .title {
