@@ -12,6 +12,10 @@ const EntryCreate = (props) => {
     setEntry({ ...entry, [event.target.name]: event.target.value })
   }
 
+  const handleDateChange = value => {
+    setEntry({ ...entry, date: value })
+  }
+
   const handleSubmit = event => {
     event.preventDefault()
 
@@ -39,7 +43,13 @@ const EntryCreate = (props) => {
   }
 
   return (
-    <EntryForm entry={entry} handleChange={handleChange} handleSubmit={handleSubmit} cancelPath='#entries/' />
+    <EntryForm
+      entry={entry}
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+      handleChangeDate={handleDateChange}
+      cancelPath='#entries/'
+    />
   )
 }
 

@@ -53,12 +53,11 @@ const Entry = props => {
     return <p>Loading stuff...</p>
   }
 
+  console.log(entry.date)
+
   return (
     <div className="container-fluid entry">
       <div className="justify-content-md-center">
-        <h2 className="entry-title">{entry.title}</h2>
-        <h3 className="entry-date">written on {entry.date}</h3>
-        <h2 className="entry">{entry.entry}</h2>
         {userId === entry.owner && (
           <Fragment>
             <Button href={`#entries/${props.match.params.id}/edit`} variant="outline-info" className="entry-button">Update</Button>
@@ -66,6 +65,9 @@ const Entry = props => {
           </Fragment>
         )}
         <Button href={'#/entries'} variant="outline-info" className="entry-button">Back</Button>
+        <h2 className="entry-title">{entry.title}</h2>
+        <h3 className="entry-date">Written on {entry.date.split('T')[0]}</h3>
+        <h2 className="entry">{entry.entry}</h2>
       </div>
     </div>
   )
