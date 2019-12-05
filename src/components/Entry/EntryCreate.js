@@ -37,7 +37,7 @@ const EntryCreate = (props) => {
       })
       .catch(() => props.alert({
         heading: 'Error',
-        message: 'Something went wrong',
+        message: 'Please fill in all fields.',
         variant: 'danger'
       }))
   }

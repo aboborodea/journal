@@ -13,6 +13,16 @@ body {
   margin: 0;
 }
 
+input {
+  &:focus {
+    outline: none !important;
+  }
+
+  &:hover {
+    border: 0 !important;
+  }
+}
+
 .size16 {
   font-size: 16px;
 }
@@ -28,6 +38,12 @@ a {
 
 }
 
+#date-font {
+  color: $font-gray;
+  font-family: $hand-writing;
+  font-size: 18px;
+}
+
 .entries-title {
   font-family: 'GFS Didot';
   font-size: 32px;
@@ -35,13 +51,13 @@ a {
 
 .entry {
   display: flex;
-  font-family: 'Handlee', cursive;
+  font-family: $hand-writing;
   font-size: 20px;
   line-height: 2em;
   padding-top: 5vh;
 
   &:focus {
-    border: 0;
+    border: 0 !important;
   }
 }
 
@@ -69,6 +85,12 @@ a {
 
 .h {
   font-size: 32px;
+  text-align: center;
+}
+
+.h2 {
+  font-size: 26px;
+  text-align: center;
 }
 
 .landing-page {
@@ -87,9 +109,13 @@ a {
   justify-content: center;
 }
 
+.navbartext {
+  color: white;
+}
+
 .navtitle {
   font-family: $hand-writing;
-  font-size: 50px;
+  font-size: 60px;
   justify-content: center;
   text-align: center;
 }
@@ -98,6 +124,7 @@ textarea {
   border: 1px solid #EEEEEE;
   box-shadow: 1px 1px 0 #DDDDDD;
   display: block;
+  font-family: $hand-writing;
   font-size: 22px;
   line-height: 30px;
   margin: 2rem auto;
@@ -119,23 +146,23 @@ textarea {
   }
 }
 
+p {
+  font-family: 'GFS Didot';
+  font-size: 18px;
+}
+
 .textbox {
   background: transparent;
   border: 0;
-  border-bottom: 1px solid $font-gray;
+  border-bottom: 1px solid #7a7876;
+  outline: 0;
   font-family: 'Handlee', cursive;
   font-size: 20px;
-  outline: 0;
   width: 20%;
-
   .t1 {
-    &:focus {
-      outline: 0 !important;
-     }
-
-    &:hover {
-      border: 0 !important;
-     }
+    background: transparent;
+    border: 0;
+    font-size: 20px;
   }
 }
 

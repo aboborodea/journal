@@ -20,30 +20,33 @@ const EntryForm = (props) => {
   }
 
   return (
-    <div className="container-fluid">
+    <div>
       <div className="entry-form">
 
         <Form onSubmit={handleSubmit}>
           <Button className="entry-button" type="button" href={cancelPath} variant="outline-info">Cancel</Button>
           <Button className="entry-button" type="submit" variant="outline-info">Submit</Button>
-
-          <Form.Group controlId="title">
-            <Form.Control className="textbox"
-              placeholder="Journal Title"
+          <p>Create a new journal entry! Give your entry and title, date, and content!</p>
+          <Form.Group className="textbox" controlId="title">
+            <Form.Control className="t1"
+              placeholder="Entry Title"
               value={entry.title}
               name="title"
               onChange={handleChange}
+              type="text"
             />
           </Form.Group>
 
           <MuiPickersUtilsProvider className="textbox" utils={DateFnsUtils}>
             <Grid>
-              <KeyboardDatePicker className="t1"
+              <KeyboardDatePicker className="textbox t1"
                 disableToolbar
                 variant="inline"
+                collapseOnSelect
                 format="MM/dd/yyyy"
                 margin="normal"
                 placeholder="Date"
+                id="date-font"
                 value={selectedDate}
                 onChange={handleDateChange}
                 KeyboardButtonProps={{
@@ -53,7 +56,7 @@ const EntryForm = (props) => {
             </Grid>
           </MuiPickersUtilsProvider>
 
-          <form controlId="entry">
+          <form controlId="entry" className="entry-font">
             <div>
               <textarea value={entry.entry} name="entry" onChange={handleChange}/>
             </div>
