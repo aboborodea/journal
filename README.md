@@ -6,7 +6,7 @@
 -   [Client Deployed Link](https://aboborodea.github.io/journal/)
 -   [Client GitHub Link](https://github.com/aboborodea/journal)
 -   [Backend Deployed Link](https://dry-basin-07175.herokuapp.com)
--   [Backend GitHub Link](https://github.com/aboborodea/project_2_api)
+-   [Backend GitHub Link](https://github.com/aboborodea/journal-api)
 
 
 <h4>Technologies</h4>
