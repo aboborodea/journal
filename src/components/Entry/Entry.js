@@ -50,7 +50,7 @@ const Entry = props => {
   }
 
   if (!entry) {
-    return <p>Loading stuff...</p>
+    return <p>You don&apos;t have access to this post, please go back.</p>
   }
 
   console.log(entry.date)
