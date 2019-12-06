@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: white;
+  color: $font-gray;
   font-family: 'GFS Didot';
   font-size: 20px;
 
@@ -92,7 +92,7 @@ a {
 }
 
 .ml-auto {
-  color: white;
+  color: $font-gray;
 }
 
 .navbar {
@@ -103,10 +103,7 @@ a {
   justify-content: center;
 }
 
-.navbartext {
-  color: white;
-  font-size: 20px;
-}
+
 
 .navsub {
   font-family: 'GFS Didot';
