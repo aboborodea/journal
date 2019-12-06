@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: $font-gray;
+  color: white;
   font-family: 'GFS Didot';
   font-size: 20px;
 
@@ -91,16 +91,28 @@ a {
   padding-left: 10px;
 }
 
+.ml-auto {
+  color: white;
+}
+
 .navbar {
   background-color: $heading-background !important;
   font-family: 'GFS Didot';
   font-size: 20px;
-  height: 5em;
+  height: 7em;
   justify-content: center;
 }
 
 .navbartext {
   color: white;
+  font-size: 20px;
+}
+
+.navsub {
+  font-family: 'GFS Didot';
+  font-size: 24px;
+  margin-top: -35px;
+  padding-left: 1em;
 }
 
 .navtitle {
