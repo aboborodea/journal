@@ -7,10 +7,18 @@ import EntryForm from './EntryForm'
 
 const EntryEdit = (props) => {
   const [entry, setEntry] = useState({ title: '', date: '', entry: '' })
+  // useState sets default
   const [updated, setUpdated] = useState(false)
 
+  // happens when useState starts
   useEffect(() => {
-    axios(`${apiUrl}/entries/${props.match.params.id}`)
+    axios({
+      url: `${apiUrl}/entries/${props.match.params.id}`,
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${props.user.token}`
+      }
+    })
       .then(res => setEntry(res.data.entry))
       .catch(console.error)
   }, [])

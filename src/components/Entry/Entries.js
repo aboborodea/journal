@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ListGroup from 'react-bootstrap/ListGroup'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
+import StarBorderIcon from '@material-ui/icons/StarBorder'
 
 const Entries = props => {
   const [entries, setEntries] = useState([])
@@ -16,21 +17,49 @@ const Entries = props => {
       }
     })
       .then(response => {
+        console.log('response', response)
         setEntries(response.data.entries)
       })
       .then(() => props.alert({ heading: 'Success', message: 'You got journal entries!', variant: 'success' }))
       .catch(() => props.alert({ heading: 'Not able to retrieve journal entries', message: 'Sorry this isn\'t working', variant: 'success' }))
   }, [])
 
-  const entriesJsx = entries.map(entry => (
-    <ListGroup.Item
-      key={entry._id}
-      as={'a'}
-      href={`#entries/${entry._id}`}
-    >
-      {entry.title}
-    </ListGroup.Item>
-  ))
+  const entriesJsx = entries.map(entry => {
+    if (entry.owner._id === props.user._id) {
+      return (
+        <ListGroup.Item
+          key={entry._id}
+          as={'a'}
+          href={`#entries/${entry._id}`}
+        >
+          <StarBorderIcon />
+          {entry.title} written by: {entry.owner.email}
+        </ListGroup.Item>
+      )
+    } else {
+      return (
+        <ListGroup.Item
+          key={entry._id}
+          as={'a'}
+          href={`#entries/${entry._id}`}
+        >
+          {entry.title} written by: {entry.owner.email}
+        </ListGroup.Item>
+      )
+    }
+  })
+
+  // const entriesJsx = entries.map(entry => (
+  //   <ListGroup.Item
+  //     key={entry._id}
+  //     as={'a'}
+  //     href={`#entries/${entry._id}`}
+  //   >
+  //     {entry.title} written by: {entry.owner.email}
+  //   </ListGroup.Item>
+  // ))
+
+  console.log('user', props.user)
 
   return (
     <div className="row">
@@ -39,6 +68,7 @@ const Entries = props => {
           <h1 className="entries-title">My Journal Entries</h1>
           <Link className="entries-link" to="/create-entries">New Journal Entry</Link>
         </div>
+        <h4 className="subheading"><StarBorderIcon />indicates your entry</h4>
         <ListGroup>
           {entriesJsx}
         </ListGroup>
