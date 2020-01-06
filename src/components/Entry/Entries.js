@@ -62,13 +62,13 @@ const Entries = props => {
   console.log('user', props.user)
 
   return (
-    <div className="row">
+    <div className="row leftSpace">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <div className="d-flex justify-content-between align-items-center">
-          <h1 className="entries-title">My Journal Entries</h1>
+          <h1 className="entries-title">Journal Entries</h1>
           <Link className="entries-link" to="/create-entries">New Journal Entry</Link>
         </div>
-        <h4 className="subheading"><StarBorderIcon />indicates your entry</h4>
+        <h4 className="subheading"><StarBorderIcon />YOUR ENTRY (You can only edit and delete your own entries)</h4>
         <ListGroup>
           {entriesJsx}
         </ListGroup>

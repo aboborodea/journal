@@ -45,6 +45,7 @@ a {
   font-size: 20px;
   line-height: 2em;
   padding-top: 5vh;
+  margin-left: 7vw;
 
   &:focus {
     border: 0 !important;
@@ -88,7 +89,20 @@ a {
   font-family: 'GFS Didot';
   font-size: 25px;
   margin-top: 5vh;
-  padding-left: 10px;
+  // padding-left: 10px;
+  // margin-left: 20vw;
+}
+
+.second-view {
+  // background-image: url('https://i.imgur.com/oGQt9UG.jpg');
+  // display: block;
+  // font-family: 'GFS Didot';
+  // font-size: 25px;
+  // margin-top: 5vh;
+  // padding-left: 10px;
+  // margin-left: 20vw;
+  // margin-right: 0vw;
+  // width: 80vw;
 }
 
 .sideNav {
@@ -176,4 +190,8 @@ p {
 .title {
   display: flex;
   justify-content: center;
+}
+
+.leftSpace {
+  margin-left: 240;
 }

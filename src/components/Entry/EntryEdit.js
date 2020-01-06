@@ -28,6 +28,12 @@ const EntryEdit = (props) => {
     setEntry(entry => ({ ...entry, [event.target.name]: event.target.value }))
   }
 
+  const handleChangeDate = event => {
+    console.log('event', event)
+    // event.persist()
+    // setEntry(entry => ({ ...entry, [entry.date]: event.target.value }))
+  }
+
   const handleSubmit = event => {
     event.preventDefault()
 
@@ -55,6 +61,7 @@ const EntryEdit = (props) => {
       entry={entry}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
+      handleChangeDate={handleChangeDate}
       cancelPath={`#entries/${props.match.params.id}`}
     />
   )
