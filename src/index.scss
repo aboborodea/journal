@@ -7,6 +7,16 @@ $heading-background: #dccafc;
 $hand-writing: 'Handlee', cursive;
 $font-gray: #7a7876;
 
+.alertContainer {
+  bottom: 10rem;
+  left: 0;
+  margin: auto;
+  max-width: 30rem;
+  position: fixed;
+  right: 0;
+  z-index: 10000;
+}
+
 body {
   background: $body-background;
   color: $font-gray;
@@ -45,7 +55,7 @@ a {
   font-size: 20px;
   line-height: 2em;
   padding-top: 5vh;
-  margin-left: 7vw;
+  margin: 0 auto;
 
   &:focus {
     border: 0 !important;
@@ -88,21 +98,20 @@ a {
   display: block;
   font-family: 'GFS Didot';
   font-size: 25px;
-  margin-top: 5vh;
+  // margin-top: 5vh;
   // padding-left: 10px;
   // margin-left: 20vw;
 }
 
+.image {
+  width: 100%;
+}
+
 .second-view {
-  // background-image: url('https://i.imgur.com/oGQt9UG.jpg');
-  // display: block;
-  // font-family: 'GFS Didot';
-  // font-size: 25px;
-  // margin-top: 5vh;
-  // padding-left: 10px;
-  // margin-left: 20vw;
-  // margin-right: 0vw;
-  // width: 80vw;
+  background-image: url('https://i.imgur.com/oGQt9UG.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 .sideNav {
@@ -117,11 +126,7 @@ a {
   background-color: $heading-background !important;
   font-family: 'GFS Didot';
   font-size: 20px;
-  height: 7em;
-  justify-content: center;
 }
-
-
 
 .navsub {
   font-family: 'GFS Didot';
@@ -192,6 +197,6 @@ p {
   justify-content: center;
 }
 
-.leftSpace {
-  margin-left: 240;
-}
+// .leftSpace {
+//   margin-left: 240;
+// }

@@ -12,7 +12,6 @@ const LandingPage = (props) => {
   } else {
     return (
       <div className="second-view">
-        <img src='https://i.imgur.com/oGQt9UG.jpg' alt="leaf-image" backgroundSize="cover" />
       </div>
     )
   }

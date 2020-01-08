@@ -56,7 +56,7 @@ const Entry = props => {
   console.log(entry.date)
 
   return (
-    <div className="container-fluid entry">
+    <div className="container entry">
       <div className="justify-content-md-center">
         {userId === entry.owner && (
           <Fragment>
