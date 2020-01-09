@@ -41,13 +41,13 @@ const Sidebar = () => {
         <Divider />
         <List>
           <ListItem>
-            <Nav.Link className="navbartext" href="#entries">Journal Entries</Nav.Link>
+            <Nav.Link className="navbartext" style= {{ fontSize: 32 }} href="#entries">Journal Entries</Nav.Link>
           </ListItem>
           <ListItem button>
             <Nav.Link className="navbartext" href="#change-password">Change Password</Nav.Link>
           </ListItem>
           <ListItem button>
-            <Nav.Link className="navbartext" href="#sign-out">Sign Out</Nav.Link>
+            <Nav.Link className="navbartext auth-fixed" href="#sign-out">Sign Out</Nav.Link>
           </ListItem>
         </List>
       </Drawer>

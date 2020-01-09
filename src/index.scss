@@ -26,6 +26,25 @@ body {
   border: 1px solid purple;
 }
 
+.auth-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+   margin: 0;
+   width: 300px
+}
+
+.h1{
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  color: $heading-background;
+}
+
+.h3 {
+  font-family: 'Handlee', cursive;
+  color: $heading-background;
+}
+
 .size16 {
   font-size: 16px;
 }
@@ -49,7 +68,7 @@ a {
 
 .entries-title {
   font-family: 'GFS Didot';
-  font-size: 32px;
+  font-size: 48px;
 }
 
 .entry {
@@ -63,6 +82,17 @@ a {
   &:focus {
     border: 0 !important;
   }
+}
+
+.entries-link {
+  color: $heading-background;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: 250px;
+  padding: 3vh;
+  font-size: 24px;
 }
 
 .entry-button {
@@ -110,11 +140,39 @@ a {
   grid-template-rows: max-content auto;
 }
 
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
 .second-view {
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  padding-top: 20vh;
+  border: 1px solid #EEEEEE;
+  box-shadow: 1px 1px 0 #DDDDDD;
+  display: block;
+  font-family: $hand-writing;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 2rem auto;
+  padding: 11px 2rem 0 2rem;
+  resize: none;
+  height: 90vh;
+  width: 95%;
+  background-image:
+    linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
+    linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
+  background-size: 100% 50px;
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:hover {
+    border: 0 !important;
+  }
 }
 
 .sideNav {
@@ -130,10 +188,6 @@ a {
   font-family: 'GFS Didot';
   font-size: 20px;
 }
-
-// .navbartext {
-//   font-size: 25px;
-// }
 
 .navsub {
   font-family: 'GFS Didot';

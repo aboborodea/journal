@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const LandingPage = (props) => {
   console.log('props.user', props.user)
@@ -10,8 +10,13 @@ const LandingPage = (props) => {
   } else {
     return (
       <div className="second-view">
-        <p className="">Welcome to Open Thought!</p>
-        <p className="">Open Thought is an online journal where you can write freely about your biggest hopes and dreams, your favorite memories, or whatever is on your mind. </p>
+        <Fragment>
+          <p className="h1">Welcome to Open Thought!</p>
+          <br></br>
+          <p className="h3" style={{ lineHeight: 1.9 }}>Open Thought is an online journal where you can write freely about your biggest hopes and dreams, your favorite memories, or whatever is on your mind. </p>
+          <br></br>
+          <p className="h3" style={{ lineHeight: 2.9 }}>Click on Journal Entries on the left to get started.</p>
+        </Fragment>
       </div>
     )
   }
