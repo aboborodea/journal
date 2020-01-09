@@ -4,16 +4,16 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link className="navbartext font-weight-bold" href="#entries">Journal Entries</Nav.Link>
-    <Nav.Link className="navbartext font-weight-bold" href="#change-password">Change Password</Nav.Link>
-    <Nav.Link className="navbartext font-weight-bold" href="#sign-out">Sign Out</Nav.Link>
+    <Nav.Link className="navbartext" style= {{ fontSize: '12px' }} href="#entries">Journal Entries</Nav.Link>
+    <Nav.Link className="navbartext auth" style= {{ fontSize: '8px' }} href="#change-password">Change Password</Nav.Link>
+    <Nav.Link className="navbartext auth" style= {{ fontSize: '8px' }} href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
 )
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link className="navbartext font-weight-bold" style= {{ color: 'white' }} href="#sign-up">Sign Up</Nav.Link>
-    <Nav.Link className="navbartext font-weight-bold" style= {{ color: 'white' }} href="#sign-in">Sign In</Nav.Link>
+    <Nav.Link className="navbartext" style= {{ color: 'white' }} href="#sign-up">Sign Up</Nav.Link>
+    <Nav.Link className="navbartext" style= {{ color: 'white' }} href="#sign-in">Sign In</Nav.Link>
   </Fragment>
 )
 

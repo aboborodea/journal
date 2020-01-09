@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
 $body-background: #f5f5f5;
-$heading-background: #dccafc;
+$heading-background: 	#6C67FE;
 $hand-writing: 'Handlee', cursive;
 $font-gray: #7a7876;
 
@@ -21,6 +21,9 @@ body {
   background: $body-background;
   color: $font-gray;
   margin: 0;
+}
+.boxed {
+  border: 1px solid purple;
 }
 
 .size16 {
@@ -84,34 +87,34 @@ a {
   font-family: 'GFS Didot';
 }
 
-.h {
-  font-size: 32px;
-  text-align: center;
-}
-
-.h2 {
-  font-size: 26px;
-  text-align: center;
-}
-
 .landing-page {
-  display: block;
-  font-family: 'GFS Didot';
-  font-size: 25px;
-  // margin-top: 5vh;
-  // padding-left: 10px;
-  // margin-left: 20vw;
+  background-image: url(https://i.imgur.com/FbqzO7z.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+  height: 100%;
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .image {
   width: 100%;
 }
 
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: max-content auto;
+}
+
 .second-view {
-  background-image: url('https://i.imgur.com/oGQt9UG.jpg');
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  padding-top: 20vh;
 }
 
 .sideNav {
@@ -127,6 +130,10 @@ a {
   font-family: 'GFS Didot';
   font-size: 20px;
 }
+
+// .navbartext {
+//   font-size: 25px;
+// }
 
 .navsub {
   font-family: 'GFS Didot';
@@ -196,7 +203,3 @@ p {
   display: flex;
   justify-content: center;
 }
-
-// .leftSpace {
-//   margin-left: 240;
-// }

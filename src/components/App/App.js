@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
@@ -76,14 +76,14 @@ class App extends Component {
     )
 
     const unAuthJsx = (
-      <div>
+      <Fragment>
         <Header user={user}/>
         {mainJsx}
-      </div>
+      </Fragment>
     )
 
     return (
-      <div>
+      <Fragment>
         {user ? authJsx : unAuthJsx}
         <div className="alertContainer">
           {alerts.map((alert, index) => (
@@ -95,7 +95,7 @@ class App extends Component {
             />
           ))}
         </div>
-      </div>
+      </Fragment>
     )
   }
 }

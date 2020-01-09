@@ -5,13 +5,13 @@ const LandingPage = (props) => {
   if (props.user === null) {
     return (
       <div className="landing-page">
-        <p className="h">Welcome to Open Thought!</p>
-        <p className="h2">Open Thought is an online journal where you can write freely about your biggest hopes and dreams, your favorite memories, or whatever is on your mind. </p>
       </div>
     )
   } else {
     return (
       <div className="second-view">
+        <p className="">Welcome to Open Thought!</p>
+        <p className="">Open Thought is an online journal where you can write freely about your biggest hopes and dreams, your favorite memories, or whatever is on your mind. </p>
       </div>
     )
   }
