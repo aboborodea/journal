@@ -33,7 +33,13 @@ const Entries = props => {
           href={`#entries/${entry._id}`}
         >
           <StarBorderIcon />
-          {entry.title} written by: {entry.owner.email}
+          <div className="title">
+            {entry.title}
+          </div>
+          <br></br>
+          <div className="written-by">
+            written by: {entry.owner.email}
+          </div>
         </ListGroup.Item>
       )
     } else {
@@ -43,21 +49,17 @@ const Entries = props => {
           as={'a'}
           href={`#entries/${entry._id}`}
         >
-          {entry.title} written by: {entry.owner.email}
+          <div className="written-by">
+            {entry.title}
+          </div>
+          <br></br>
+          <div className="written-by">
+            written by: {entry.owner.email}
+          </div>
         </ListGroup.Item>
       )
     }
   })
-
-  // const entriesJsx = entries.map(entry => (
-  //   <ListGroup.Item
-  //     key={entry._id}
-  //     as={'a'}
-  //     href={`#entries/${entry._id}`}
-  //   >
-  //     {entry.title} written by: {entry.owner.email}
-  //   </ListGroup.Item>
-  // ))
 
   console.log('user', props.user)
 
