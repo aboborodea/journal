@@ -27,7 +27,7 @@ const Entries = props => {
   const entriesJsx = entries.map(entry => {
     if (entry.owner._id === props.user._id) {
       return (
-        <ListGroup.Item
+        <ListGroup.Item className="entry-list"
           key={entry._id}
           as={'a'}
           href={`#entries/${entry._id}`}
@@ -38,7 +38,7 @@ const Entries = props => {
       )
     } else {
       return (
-        <ListGroup.Item
+        <ListGroup.Item className="entry-list"
           key={entry._id}
           as={'a'}
           href={`#entries/${entry._id}`}

@@ -31,7 +31,8 @@ body {
   bottom: 0;
   left: 0;
    margin: 0;
-   width: 300px
+   width: 300px;
+   padding-bottom: 5px;
 }
 
 .h1{
@@ -135,19 +136,27 @@ a {
 }
 
 #root {
+  background-color: #EDECFF;
   min-height: 100vh;
   display: grid;
   grid-template-rows: max-content auto;
+
 }
 
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+.entry-list {
+  margin: 15px;
+  border: 2px solid $heading-background;
+  font-size: 18px;
 }
+
+// .list-group-item {
+//   position: relative;
+//   display: block;
+//   padding: 0.75rem 1.25rem;
+//   margin-bottom: -1px;
+//   background-color: #fff;
+//   border: 1px solid rgba(0, 0, 0, 0.125);
+// }
 
 .second-view {
   border: 1px solid #EEEEEE;
@@ -165,14 +174,12 @@ a {
     linear-gradient(0deg, transparent 5em, rgba(255,0,0,.2) 0, transparent 5.1em),
     linear-gradient(rgba(0,0,255,.3) 1px, transparent 0);
   background-size: 100% 50px;
+  border: 3px solid $heading-background;
 
-  &:focus {
-    outline: none !important;
-  }
+}
 
-  &:hover {
-    border: 0 !important;
-  }
+.second-view-text {
+  padding-top: 11vh;
 }
 
 .sideNav {
@@ -235,7 +242,7 @@ p {
 }
 
 .subheading {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .textbox {
