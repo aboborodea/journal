@@ -49,7 +49,7 @@ const Entries = props => {
           as={'a'}
           href={`#entries/${entry._id}`}
         >
-          <div className="written-by">
+          <div className="title">
             {entry.title}
           </div>
           <br></br>
